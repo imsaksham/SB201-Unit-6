@@ -1,0 +1,40 @@
+Q1) Limitation of JDBC-based persistence logic over the ORM.
+
+Ans:
+i) JDBC persistence logic supports SQL statements based programing, these are database s/w dependent statements. So JDBC persistence logic is database s/w dependent persistence logic.That's means if we want to change database s/w in the middle of project development it is not possible,we have to re develop JDBC persistence logic for other database s/w's.
+
+Solution:To overcome this problem we have to go for ORM -framework s/w's based persistence logic (ex: Hibernate, ibaties, toplink,..etc).
+
+ii) By default JDBC ResultSet object is not serializable, so we can not send that object over the network.To overcome this RowSet introduced but that is not supporting for all JDBC drivers.
+
+Solution:We have to take the support of DTO(Data Transfer Object)/VO(Value Object) design pattern.
+
+
+Q2) Differentiate between Hibernate and JPA.
+
+Ans:
+1. Hibernate is an ORM tool used for saving the state of the Java object in the database whereas JPA is responsible for managing relational databases in Java applications.
+
+2. Hibernate is defined under org.hibernate package. And JPA is defined under the javax.persistence package.
+
+
+Q3) What is the Difference between the Java Bean class and the POJO class.
+
+Ans:
+1. Java bean is a special POJO which have some restrictions whereas POJO doesn’t have special restrictions other than those forced by Java language.
+
+2. Java Bean should implement serializable interface whereas POJO can implement Serializable interface.
+
+3. In Java Bean, fields have only private visibility but in POJO, fields can have any visibility.
+
+
+Q4) Explain about the ORM, what are the benefits of the ORM approach over the JDBC approach.
+
+Ans:
+ORM, an abbreviation for Object-relational mapping, is a programming approach that connects object code to a relational database via a metadata descriptor. This object code is developed in object-oriented programming (OOP) languages like Java, Python, C++, C#, etc. ORM transforms data between type systems that don’t get along in relational databases or OOP languages. In other words, it is a technique for storing, recovering, updating, as well as deleting from an object-oriented program in a relational (table) database.
+
+Advantages of ORM over JDBC:
+1) Resolves object code and relational mismatch.
+2) Using ORM, the development process is quite simplified as it automates object to table and table to object conversion which results in lower development and maintenance cost.
+3) The code is less as compared to embedded SQL.
+4) Gives an optimized solution that results in faster application and easier maintenance.
